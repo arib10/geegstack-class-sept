@@ -1,0 +1,79 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Vault Animation</title>
+	<style>
+		body {
+			background-color: cyan;
+		}
+		main {
+			width: 268px;
+			position: relative;
+			padding-top: 200px;
+		}
+		section {
+			width: 268px;
+			height: 341px;
+			background-image: url("vault.png");
+			background-size: 100% 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 3;
+		}
+		section img {
+			animation-name: rotating-lock;
+			animation-duration: 1.6s;
+			animation-iteration-count: infinite;
+			animation-delay: 2s;
+			animation-timing-function: linear;
+		}
+		
+		main > img {
+			animation-name: moving-coin;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+			position: absolute;
+			top: 0px;
+			right: 50%;
+			z-index: -1;
+		}
+		
+		@keyframes rotating-lock {
+			0% {
+				transform: rotate(0deg);
+			}
+			
+			20% {
+				transform: rotate(360deg)
+			}
+			
+			21% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+		@keyframes moving-coin {
+			from {
+				transform: translate(50%, 0px);
+			}
+			
+			to {
+				transform: translate(50%, 400px);
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1>Git hub Heading</h1>
+	<main>
+		<img src="download.png" />
+		<section>
+			<img src="lock.png" />
+		</section>
+	</main>
+</body>
+</html>
